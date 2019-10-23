@@ -3,11 +3,11 @@ pem=$(cat pem.txt)
 
 cd ~/wanchain/src/github.com/wanchain/go-wanchain && git pull &&git checkout tps-test-delay && git pull && make
 
-cp ~/wanchain/src/github.com/wanchain/go-wanchain ~/jacob_bin
-cd ~/jacob_bin
-git add -u
-gitc "update"
-git push
+#cp ~/wanchain/src/github.com/wanchain/go-wanchain ~/jacob_bin
+#cd ~/jacob_bin
+#git add -u
+#gitc "update"
+#git push
 
 cd ~/wanchain/tps-test
 
