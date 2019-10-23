@@ -8,3 +8,4 @@ do
   ssh -o StrictHostKeyChecking=no -i ${pem} ubuntu@${ip} "ps -ef|grep gwan"
   ((index++))
 done
+
