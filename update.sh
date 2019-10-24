@@ -17,6 +17,7 @@ do
   scp -o StrictHostKeyChecking=no -i ${pem} ~/wanchain/src/github.com/wanchain/go-wanchain/build/bin/gwan ubuntu@${ip}:~/gwan
   scp -o StrictHostKeyChecking=no -i ${pem} ~/wanchain/tps-test/run.sh ubuntu@${ip}:~/ 
   scp -o StrictHostKeyChecking=no -i ${pem} ~/wanchain/tps-test/tx.sh ubuntu@${ip}:~/ 
+  scp -o StrictHostKeyChecking=no -i ${pem} ~/molin.pem ubuntu@${ip}:~/ 
   #scp -o StrictHostKeyChecking=no -i ${pem} ~/tps-test/watch.sh ubuntu@${ip}:~/ 
   ((index++))
 
