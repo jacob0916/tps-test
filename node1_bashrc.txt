@@ -1,0 +1,11 @@
+export PATH=$PATH:/usr/local/go/bin
+export GOROOT=/usr/local/go
+export GOPATH=/home/ubuntu/gopath
+alias cdtt='cd ~/wanchain/tps-test'
+alias aws='~/wanchain/tps-test/login.sh'
+alias cdg='cd ~/wanchain/src/github.com/wanchain/go-wanchain'
+alias cdsp='cd ~/scanPos'
+
+alias bg='~/gwan attach ~/data/gwan.ipc'
+export NODE_PATH=.
+
