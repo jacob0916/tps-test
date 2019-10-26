@@ -4,7 +4,7 @@
 
 # wait pow->pos switch
 i=1
-while ((i <= 20 ))
+while ((i <= 6 ))
 do
         echo "hello"
         ((i++))
