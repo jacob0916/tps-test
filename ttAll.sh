@@ -24,6 +24,7 @@ do
 	echo ${commits[0]}
 	echo ${slotTime}
 	. ./stt.sh ${commits[0]} ${slotTime}
+	. ./ett.sh ${job}
 
 done
 

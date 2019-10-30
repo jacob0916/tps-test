@@ -8,3 +8,6 @@ cd -
 
 . ./stop.sh
 
+cd ~/scanPos
+
+cp blocks.xlsx  ~/blocks_$1.xlsx
