@@ -1,7 +1,9 @@
 #!/bin/bash
 pem=$(cat pem.txt)
 
-cd ~/wanchain/src/github.com/wanchain/go-wanchain && git pull &&git checkout tps-test-delay && git pull && make
+#cd ~/wanchain/src/github.com/wanchain/go-wanchain && git pull &&git checkout tps-test-delay && git pull && make
+echo "git reset"+$1
+cd ~/wanchain/src/github.com/wanchain/go-wanchain && git pull &&git checkout tps-test-delay && git reset --hard $1  && make
 
 #cp ~/wanchain/src/github.com/wanchain/go-wanchain ~/jacob_bin
 #cd ~/jacob_bin
