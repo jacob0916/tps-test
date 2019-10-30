@@ -1,6 +1,7 @@
 # 10m-2m-25-13
 
 cd ~/wanchain/src/github.com/wanchain/go-wanchain
+git pull
 #git log --pretty=oneline | grep 10m-2m-25-13 | grep nodelay | grep -v grep | awk '{print $2}'
 jobs1=($(git log --pretty=oneline | grep 10m-2m-25-13 | grep nodelay | grep -v grep | awk '{print $2}'))
 # 20m-4m-25-13
