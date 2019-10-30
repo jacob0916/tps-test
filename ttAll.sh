@@ -23,6 +23,8 @@ do
 	slotTime=$( echo ${job} | awk -F- '{print $5}')
 	echo ${commits[0]}
 	echo ${slotTime}
+	
+	cd ~/wanchain/tps-test
 	. ./stt.sh ${commits[0]} ${slotTime}
 	. ./ett.sh ${job}
 
