@@ -21,6 +21,8 @@ cd ~/wanchain/tps-test
 for job in ${jobs1[@]}
 do
   	echo ${job} 
+	
+	cd ~/wanchain/src/github.com/wanchain/go-wanchain
 	commits=($(git log --pretty=oneline | grep ${job} | grep nodelay | grep -v grep | awk '{print $1}'))
 	#10m-2m-25-13-50-nodelay
 	slotTime=$( echo ${job} | awk -F- '{print $5}')
