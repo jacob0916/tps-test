@@ -15,6 +15,8 @@ echo ${jobs1[@]}
 echo "=========Jobs3========="
 echo ${jobs1[@]}
 
+cd ~/wanchain/tps-test
+. ./limitSpeed.sh
 
 for job in ${jobs1[@]}
 do
@@ -31,3 +33,5 @@ do
 
 done
 
+cd ~/wanchain/tps-test
+. ./clearLimit.sh
