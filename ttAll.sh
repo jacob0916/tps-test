@@ -34,36 +34,46 @@ function doJob(){
         . ./ett.sh $1
 }
 
-#  Execute Jobs1
-cd ~/wanchain/tps-test
-cp ip_index25.txt ip_index.txt
-. buildIP.sh
-. ./limitSpeed.sh
+if [${#jobs1[@]} -nq 0]; then
+	#  Execute Jobs1
+	cd ~/wanchain/tps-test
+	cp ip_index25.txt ip_index.txt
+	. buildIP.sh
+	. ./limitSpeed.sh
 
-for job in ${jobs1[@]}
-do
-  	echo ${job} 
-  	doJob  ${job}	
-done
+	for job in ${jobs1[@]}
+	do
+        	echo ${job}
+        	doJob  ${job}
+	done
+	
+fi
 
-#  Execute Jobs2
-cd ~/wanchain/tps-test
-cp ip_index25.txt ip_index.txt
-. buildIP.sh
-. ./clearLimit.sh
-for job in ${jobs2[@]}
-do
-  	echo ${job} 
-  	doJob  ${job}	
-done
-# Execute Jobs3
-cd ~/wanchain/tps-test
-cp ip_index50.txt ip_index.txt
-. buildIP.sh
-. ./clearLimit.sh
-for job in ${jobs3[@]}
-do
-  	echo ${job} 
-  	doJob  ${job}	
-done
+if [${#jobs2[@]} -nq 0]; then
+	#  Execute Jobs2
+	cd ~/wanchain/tps-test
+	cp ip_index25.txt ip_index.txt
+	. buildIP.sh
+	. ./clearLimit.sh
+	for job in ${jobs2[@]}
+	do
+        	echo ${job}
+        	doJob  ${job}
+	done
+	
+fi
+
+if [${#jobs3[@]} -nq 0]; then
+	
+	# Execute Jobs3
+	cd ~/wanchain/tps-test
+	cp ip_index50.txt ip_index.txt
+	. buildIP.sh
+	. ./clearLimit.sh
+	for job in ${jobs3[@]}
+	do
+  		echo ${job} 
+  		doJob  ${job}	
+	done
+fi
 
