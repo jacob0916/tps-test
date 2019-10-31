@@ -1,0 +1,13 @@
+20m-4m-50-25-60-nodelay  
+20m-4m-50-25-50-nodelay  
+20m-4m-50-25-40-nodelay  
+20m-4m-50-25-30-nodelay  
+20m-4m-50-25-25-nodelay  
+20m-4m-50-25-20-nodelay  
+20m-4m-50-25-15-nodelay  
+20m-4m-50-25-10-nodelay  
+20m-4m-50-25-8-nodelay   
+20m-4m-50-25-7-nodelay   
+20m-4m-50-25-5-nodelay   
+20m-4m-50-25-4-nodelay   
+20m-4m-50-25-2-nodelay 

@@ -1,0 +1,13 @@
+10m-2m-25-13-60-nodelay 
+10m-2m-25-13-50-nodelay 
+10m-2m-25-13-40-nodelay 
+10m-2m-25-13-30-nodelay 
+10m-2m-25-13-25-nodelay 
+10m-2m-25-13-20-nodelay 
+10m-2m-25-13-15-nodelay 
+10m-2m-25-13-10-nodelay 
+10m-2m-25-13-8-nodelay  
+10m-2m-25-13-7-nodelay  
+10m-2m-25-13-5-nodelay  
+10m-2m-25-13-4-nodelay  
+10m-2m-25-13-2-nodelay  
