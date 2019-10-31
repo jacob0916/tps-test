@@ -3,11 +3,14 @@
 cd ~/wanchain/src/github.com/wanchain/go-wanchain
 git pull
 #git log --pretty=oneline | grep 10m-2m-25-13 | grep nodelay | grep -v grep | awk '{print $2}'
-jobs1=($(git log --pretty=oneline | grep 10m-2m-25-13 | grep nodelay | grep -v grep | awk '{print $2}'))
+cd ~/wanchain/tps-test
+jobs1=($(cat ./jobs/jobs1.txt))
 # 20m-4m-25-13
-jobs2=($(git log --pretty=oneline | grep 10m-4m-25-13 | grep nodelay | grep -v grep | awk '{print $2}'))
+#jobs2=($(git log --pretty=oneline | grep 10m-4m-25-13 | grep nodelay | grep -v grep | awk '{print $2}'))
+jobs2=($(cat ./jobs/jobs2.txt))
 # 20m-4m-50-25
-jobs3=($(git log --pretty=oneline | grep 20m-4m-50-25 | grep nodelay | grep -v grep | awk '{print $2}'))
+#jobs3=($(git log --pretty=oneline | grep 20m-4m-50-25 | grep nodelay | grep -v grep | awk '{print $2}'))
+jobs3=($(cat ./jobs/jobs3.txt))
 echo "=========Jobs1========="
 echo ${jobs1[@]}
 echo "=========Jobs2========="
