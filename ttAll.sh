@@ -36,6 +36,8 @@ function doJob(){
 
 #  Execute Jobs1
 cd ~/wanchain/tps-test
+cp ip_index25.txt ip_index.txt
+. buildIP.sh
 . ./limitSpeed.sh
 
 for job in ${jobs1[@]}
@@ -46,6 +48,8 @@ done
 
 #  Execute Jobs2
 cd ~/wanchain/tps-test
+cp ip_index25.txt ip_index.txt
+. buildIP.sh
 . ./clearLimit.sh
 for job in ${jobs2[@]}
 do
@@ -54,6 +58,8 @@ do
 done
 # Execute Jobs3
 cd ~/wanchain/tps-test
+cp ip_index50.txt ip_index.txt
+. buildIP.sh
 . ./clearLimit.sh
 for job in ${jobs3[@]}
 do
