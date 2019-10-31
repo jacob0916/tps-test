@@ -34,7 +34,7 @@ function doJob(){
         . ./ett.sh $1
 }
 
-if [ ${#jobs1[@]} -nq 0 ]; then
+if [ ${#jobs1[@]} -ne 0 ]; then
 	#  Execute Jobs1
 	cd ~/wanchain/tps-test
 	cp ip_index25.txt ip_index.txt
@@ -49,7 +49,7 @@ if [ ${#jobs1[@]} -nq 0 ]; then
 	
 fi
 
-if [ ${#jobs2[@]} -nq 0 ]; then
+if [ ${#jobs2[@]} -ne 0 ]; then
 	#  Execute Jobs2
 	cd ~/wanchain/tps-test
 	cp ip_index25.txt ip_index.txt
@@ -63,7 +63,7 @@ if [ ${#jobs2[@]} -nq 0 ]; then
 	
 fi
 
-if [ ${#jobs3[@]} -nq 0 ]; then
+if [ ${#jobs3[@]} -ne 0 ]; then
 	
 	# Execute Jobs3
 	cd ~/wanchain/tps-test
