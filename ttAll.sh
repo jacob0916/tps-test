@@ -11,29 +11,50 @@ jobs3=($(git log --pretty=oneline | grep 20m-4m-50-25 | grep nodelay | grep -v g
 echo "=========Jobs1========="
 echo ${jobs1[@]}
 echo "=========Jobs2========="
-echo ${jobs1[@]}
+echo ${jobs2[@]}
 echo "=========Jobs3========="
-echo ${jobs1[@]}
+echo ${jobs3[@]}
 
+function doJob(){
+	cd ~/wanchain/src/github.com/wanchain/go-wanchain
+        #commits=($(git log --pretty=oneline | grep ${job} | grep nodelay | grep -v grep | awk '{print $1}'))
+        commits=($(git log --pretty=oneline | grep $1 | grep nodelay | grep -v grep | awk '{print $1}'))
+        #10m-2m-25-13-50-nodelay
+        #slotTime=$( echo ${job} | awk -F- '{print $5}')
+        slotTime=$( echo $1 | awk -F- '{print $5}')
+        echo ${commits[0]}
+        echo ${slotTime}
+
+        cd ~/wanchain/tps-test
+        . ./stt.sh ${commits[0]} ${slotTime}
+        #. ./ett.sh ${job}
+        . ./ett.sh $1
+}
+
+#  Execute Jobs1
 cd ~/wanchain/tps-test
 . ./limitSpeed.sh
 
 for job in ${jobs1[@]}
 do
   	echo ${job} 
-	
-	cd ~/wanchain/src/github.com/wanchain/go-wanchain
-	commits=($(git log --pretty=oneline | grep ${job} | grep nodelay | grep -v grep | awk '{print $1}'))
-	#10m-2m-25-13-50-nodelay
-	slotTime=$( echo ${job} | awk -F- '{print $5}')
-	echo ${commits[0]}
-	echo ${slotTime}
-	
-	cd ~/wanchain/tps-test
-	. ./stt.sh ${commits[0]} ${slotTime}
-	. ./ett.sh ${job}
-
+  	doJob  ${job}	
 done
 
+#  Execute Jobs2
 cd ~/wanchain/tps-test
 . ./clearLimit.sh
+for job in ${jobs2[@]}
+do
+  	echo ${job} 
+  	doJob  ${job}	
+done
+# Execute Jobs3
+cd ~/wanchain/tps-test
+. ./clearLimit.sh
+for job in ${jobs3[@]}
+do
+  	echo ${job} 
+  	doJob  ${job}	
+done
+
